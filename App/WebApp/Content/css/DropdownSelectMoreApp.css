@@ -1,0 +1,397 @@
+﻿/*Menu on top*/
+/*#menu-on-top {
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+#menu-on-top .navbar-nav > li > a {
+    color: white;*/
+    /*color:#d88d00;*/
+    /*font-weight:bold;*/
+    /*padding: 5px 10px;
+}
+
+#menu-on-top .navbar-nav > li > a:hover {
+    color: #5578eb;
+}
+
+#menu-on-top .navbar-nav > li.open > a {
+    color: #5578eb;
+    background-color: white;
+}
+
+#menu-on-top .navbar-nav > li > .select-app-more .select-app-more-body {
+    padding: 10px;
+    height: 355px;
+}
+ul.select-app-more {
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    border-top: unset;
+    border-right: unset;
+    width: 295px !important;
+}
+ul.select-app-more li a {
+    color: #3c8dbc !important;
+    padding:unset !important;
+}
+ul.select-app-more li a:hover {
+    background-color: unset !important;
+    color: unset !important;
+}
+ul.select-app-more li a:hover span{
+    background-color: unset !important;
+    color: #3c8dbc !important
+}
+ul.block-item-app {
+    padding-inline-start: 0px;
+}
+
+ul > li.item-app {
+    text-align: center;
+    padding: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    z-index: 999;
+    height: 98px;
+    min-height: 98px;
+    width: 86px;
+    border: 1px solid transparent;
+}
+
+ul > li.item-app:hover {
+    border: 1px solid #d88d00 !important;
+}
+
+#menu-on-top .navbar-nav > li > .select-app-more .select-app-more-footer {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+#vmb#vmb a.vmbd, #vmb#vmb a.vmb_e, #vmb#vmb span.vmb_e {
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+}
+
+.vmb_d .vmb_q {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    width: 50px;
+}
+
+.vmb_d .vmb_p {*/
+    /* background-image: url(../images/icons/google-icon-vector-apps.png); */
+    /*-webkit-background-size: 64px 2686px;
+    background-size: 64px 2686px;
+}
+
+.vmb_d .vmb_p, .vmb_d .vmb_b {
+    display: inherit;
+    vertical-align: middle;
+    height: 64px;
+    width: 64px;
+}
+
+.vmb_Z .vmb_d {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+}
+
+.vmb_r {
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 84px;
+    text-overflow: ellipsis;
+}
+
+.vmb_i:hover .vmb_r, .vmb_s .vmb_j.gb_i > .vmb_d:focus .vmb_r, .vmb_j.vmb_i > .vmb_d:active .vmb_r {*/
+/*    white-space: normal;
+    overflow-wrap: break-word;
+    word-wfrap: break-word;*/
+/*}
+
+#menu-on-top .navbar-right {
+    margin-right: unset;
+}
+.navbar .navbar-nav > li > .select-app-more {
+    background-color: #fff !important;
+    border: 1px solid #bebebe !important;
+    border-top: unset !important;
+    border-color: rgba(0,0,0,.2) !important;
+    color: #000 !important;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2) !important;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.select-app-more-body {
+    padding: 10px;*/
+    /*height: 355px;*/
+/*}
+
+.navbar .navbar-nav > li > .select-app-more .select-app-more-footer {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f5f5f5;
+    cursor: pointer;
+}*/
+/*Select More App dropdown*/
+
+/*.scrollbar1 {
+    float: right !important;
+    height: 310px !important;*/
+   /* width: 65px !important;*/
+    /*background: #F5F5F5 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+  
+
+}
+
+    
+    .scrollbar1::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    .scrollbar1::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .scrollbar1::-webkit-scrollbar-thumb {
+        border-radius: 5x;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #11d9f5;
+    }
+.force-overflow {
+    min-height: 1000px;
+}*/
+
+/*Menu on top*/
+#menu-on-top {
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+    #menu-on-top .navbar-nav > li > a {
+        color: white;
+        /*color:#d88d00;*/
+        /*font-weight:bold;*/
+        padding: 5px 10px;
+    }
+
+        #menu-on-top .navbar-nav > li > a:hover {
+            color: #5578eb;
+        }
+
+    #menu-on-top .navbar-nav > li.open > a {
+        color: #5578eb;
+        background-color: white;
+    }
+
+    #menu-on-top .navbar-nav > li > .select-app-more .select-app-more-body {
+        padding: 10px;
+        /*height: 355px;*/
+    }
+
+.select-app-more {
+    border: 1px solid rgba(0,0,0,0.2);
+    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);*/
+    border-top: unset;
+    border-right: unset;
+    width: 300px !important;
+}
+
+ul.select-app-more li a {
+    color: #3c8dbc !important;
+    padding: unset !important;
+}
+
+    ul.select-app-more li a:hover {
+        background-color: unset !important;
+        color: unset !important;
+        text-decoration: none !important;
+    }
+
+        ul.select-app-more li a:hover span {
+            background-color: unset !important;
+            color: #3c8dbc !important;
+            text-decoration: none !important;
+        }
+
+ul.block-item-app {
+    padding-inline-start: 0px;
+}
+
+ul > li.item-app {
+    text-align: center;
+    padding: 1px;
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    z-index: 999;
+    /*height: 98px;*/
+    min-height: 98px;
+    width: 86px;
+    border: 1px solid transparent;
+}
+
+    ul > li.item-app:hover {
+        border: 1px solid #d88d00 !important;
+    }
+
+ul.dropdown-menu li a span, ul.dropdown-menu li a:focus, ul.dropdown-menu .active a, ul.dropdown-menu .active a:hover, ul.dropdown-menu .active a:focus {
+    /*    background-color: #2487c9; */
+    text-decoration: none !important;
+    color: #fff;
+}
+
+#menu-on-top .navbar-nav > li > .select-app-more .select-app-more-footer {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#vmb#vmb a.vmbd, #vmb#vmb a.vmb_e, #vmb#vmb span.vmb_e {
+    color: rgba(0,0,0,0.87);
+    text-decoration: none !important;
+}
+
+.vmb_d .vmb_q {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    width: 50px;
+}
+
+.vmb_d .vmb_p {
+    background-image: url(../images/icons/google-icon-vector-apps.png);
+    -webkit-background-size: 64px 2686px;
+    background-size: 64px 2686px;
+}
+
+.vmb_d .vmb_p, .vmb_d .vmb_b {
+    display: inline-block;
+    vertical-align: top;
+    height: 64px;
+    width: 64px;
+}
+
+.vmb_Z .vmb_d {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+}
+
+.vmb_r {
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 84px;
+    text-overflow: ellipsis;
+}
+
+.vmb_i:hover .vmb_r, .vmb_s .vmb_j.gb_i > .vmb_d:focus .vmb_r, .vmb_j.vmb_i > .vmb_d:active .vmb_r {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-decoration: none !important;
+}
+
+#menu-on-top .navbar-right {
+    margin-right: unset;
+}
+
+.navbar .navbar-nav > li > .select-app-more {
+    background-color: #fff !important;
+    border: 1px solid #bebebe !important;
+    border-top: unset !important;
+    border-color: rgba(0,0,0,.2) !important;
+    color: #000 !important;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2) !important;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.select-app-more-body {
+    padding-left: 20px;
+}
+
+.navbar .navbar-nav > li > .select-app-more .select-app-more-footer {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+/*Select More App dropdown*/
+
+.dropdown-toggle::after {
+    display: inline-block;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.0em !important;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.block-item-app li a:hover {
+    text-decoration: none !important;
+}
+/*Select More App dropdown*/
+
+.scrollbar1 {
+    height: 310px !important;
+    width: 300px !important;
+    background: #F5F5F5 !important;
+    overflow-y: visible !important;
+    overflow-x: hidden;
+    margin-bottom: 25px !important;
+}
+
+
+    .scrollbar1::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    .scrollbar1::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .scrollbar1::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #11d9f5;
+    }

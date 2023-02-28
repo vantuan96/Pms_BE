@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - EForm </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="~/Content/img/ficon.ico" />
+
+    <!-- Bootstrap 3.3.7 -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Content/css/DropdownSelectMoreAppCustom.css" rel="stylesheet" />
+    <link href="~/Content/css/loginStyle.css" rel="stylesheet" />
+
+    <!-- iCheck -->
+    <!-- @*<link rel="stylesheet" href="./Assets/lib/iCheck/square/blue.css">*@ -->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
+
+    <!-- jQuery 3 -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="~/Content/lib/textavatar/initial.min.js"></script>
+   
+
+</head>
+@{
+    Layout = null;
+}
+<body class=" login">
+    <!--Block dropdown select more App-->
+    <div id="menu-on-top">
+        <ul class="nav navbar-nav navbar-right nav_right_menu showApp">
+        </ul>
+    </div>
+    <div class="content">
+        <div style="text-align: center;font-size: 30px;">
+            <div class="text-center w-100 d-flex justify-content-center" style="margin-top:10px;"><img src="https://vis.vinmec.com/assets/media/login_logo.png" width="260" class="logo-login" alt=""></div>
+        </div>
+        <div class="row" style="border-top:3px solid #FFC107">
+            <div class="col-md-6">
+                <div class="login-card-body">
+                    <div class="login-logo" style="clear:both;">
+                        <a href="~/"><b>PMS</b></a>
+                        <br />
+                        <i class="app-des sologanText">Quản lý gói khám</i>
+                    </div>
+                    <div class="form-actions" style="margin-top:50px;">
+                        <form action="SignIn" method="get">
+                            <button type="submit" class="btn btn-info btnLogin" name="btnLogin" style="width: 100%">Đăng nhập</button>
+                        </form>
+
+                    </div>
+                    <div style="margin-top:30px;" id="show">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="background: /*#efefef*/#efefef7a;">
+                <div class="login-card-guild">
+                    <h3 class="form-title"><b>Hướng dẫn đăng nhập</b></h3>
+                    <p><b>Tên đăng nhập:</b></p>
+                    <p style="font-size: 1.1rem;">Sử dụng account AD (là account đăng nhập vào máy tính với những máy Join domain Vingroup)</p>
+                    <p><b>Mật khẩu:</b></p>
+                    <p style="font-size: 1.1rem;">Mật khẩu account AD</p>
+                    <p style="font-size: 1.1rem;">Trường hợp không rõ Account AD của mình hoặc không đăng nhập được, vui lòng liên hệ bộ phận IT của đơn vị để kiểm tra</p>
+                    <p style="font-size: 1.1rem;margin-bottom:unset;"><a target="_blank" href="/huong-dan-su-dung"><b>Hướng dẫn sử dụng <i class="fa fa-arrow-circle-right"></i></b></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="notification" value="Thông báo" />
+    <input type="hidden" name="delFail" value="Địa chỉ không tồn tại" />
+    <script src="~/Assets/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        function AjaxPost(url) {
+            return $.ajax({
+                type: "GET",
+                datatype: "json",
+                url: url,
+            });
+        }
+
+        $(document).ready(function () {
+            window.setInterval(function () {
+                var elem = document.getElementsByClassName('scrollbar1');
+                elem.scrollTop = elem.scrollHeight;
+            }, 5000);
+            AjaxPost("/Authen/GetListAppLogin").done(function (response) {
+                $(".showApp").html(response);
+                $(".img-circle").initial({ charCount: 1, seed: 100, width: 50, height: 50, fontSize: 30 });
+            });
+            AjaxPost("/Authen/GetListApp").done(function (response) {
+                $("#show").html(response);
+                $(".img-circle").initial({ charCount: 1, seed: 100, width: 50, height: 50, fontSize: 30 });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

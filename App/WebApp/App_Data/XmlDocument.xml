@@ -1,0 +1,1285 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PMS.WebApp</name>
+    </assembly>
+    <members>
+        <member name="T:Resources.MessageSource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Resources.MessageSource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Resources.MessageSource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,PMS.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:PMS.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PMS.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:PMS.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:PMS.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PMS.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:PMS.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,PMS.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,PMS.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(PMS.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:PMS.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:PMS.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},PMS.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:PMS.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:PMS.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleKey.#ctor(PMS.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:PMS.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,PMS.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:PMS.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:PMS.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PMS.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:PMS.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:PMS.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PMS.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:PMS.Authentication.CSRFCheck">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PMS.Authentication.CSRFCheck.IsAuthorized(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            IsAuthorized
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Authentication.Recaptcha">
+            <summary>
+            Recaptcha
+            </summary>
+        </member>
+        <member name="M:PMS.Authentication.Recaptcha.IsReCaptchValid(System.String)">
+            <summary>
+            IsReCaptchValid
+            </summary>
+            <param name="EncodedResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminActionController">
+            <summary>
+            Module Action Managment
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.GetListModuleAPI(PMS.Contract.Models.GroupActionParameterModel)">
+            <summary>
+            API Get list modules FN
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.GetListGroupActionAPI(PMS.Contract.Models.GroupActionParameterModel)">
+            <summary>
+            API list Group Action FN
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.GetDetailGroupActionAPI(System.Guid)">
+            <summary>
+            API Get group action detail FN
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.MappingGroupActionAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Maping action into group FN
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.GetListActionAPI(PMS.Contract.Models.PagingParameterModel)">
+            <summary>
+            Get List Action FN
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminActionController.GetListActionAPIV2(PMS.Contract.Models.PagingParameterModel)">
+            <summary>
+            Get List Action Api Ver2
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminCommonController">
+            <summary>
+            Module Common/General/Masterdata Management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminCommonController.GetListDepartmentAPI(PMS.Contract.Models.DepartmentParameterModel)">
+            <summary>
+            Get list department
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminCommonController.CreateNotifyAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New PackageGroup
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:PMS.Controllers.AdminControllers.AdminPatientInPackageController" -->
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetListPatientAPI(PMS.Contract.Models.PatientParameterModel)">
+            <summary>
+            API Get List Patient
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetListPatientInPackageAPI(PMS.Contract.Models.PatientInPackageParameterModel)">
+            <summary>
+            Get list patient in package (Search patient in package)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.RegisterPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageModel)">
+            <summary>
+            API Create or Update Patient in package (Đăng ký gói)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetListPatientInServiceAPI(System.Guid,System.String)">
+            <summary>
+            Get detail service in policy for reg package/re-calculate price/amount in package (If have discount)
+            </summary>
+            <param name="policyid"></param>
+            <param name="pkgamountafterdiscount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ScaleUpPatientInPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageUpdateModel)">
+            <summary>
+            linhht API Update contract, scale enddate PatientInPackage (chỉnh sửa hợp đồng, gia hạn gói)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ReOpenPatientInPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageReopenModel)">
+            <summary>
+            linhht API Reopen (Mở lại gói đã đóng)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageServiceReExaminateAPI(System.Guid)">
+            <summary>
+            linhht Get detail patient in tab re-exmainate
+            tab Theo dõi tái khám
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageSaveReExaminateServicesAPI(System.Guid)">
+            <summary>
+            linhht save re-exmainate service 
+            lưu các dịch vụ theo dõi tái khám
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ClosePackageAPI(System.Guid)">
+            <summary>
+            Tungdd14: Hủy tái khám
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageInfoDetailAPI(System.Guid)">
+            <summary>
+            API get detail Patient in package information
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageServiceUsingAPI(System.Guid)">
+            <summary>
+            Get detail patient in package using service current status
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageExportServiceUsingAPI(System.Guid)">
+            <summary>
+            API Export file for statistic service using
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageVisitAPI(System.Guid)">
+            <summary>
+            Get list visit in package
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ListChargeToConfirmInPackageAPI(System.Guid,System.String)">
+            <summary>
+            API get list charge mapping with service in package to apply into Package
+            </summary>
+            <param name="patientinpackageid"></param>
+            <param name="listChargeUncheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ConfirmChargeToInPackageAPI(PMS.Contract.Models.AdminModels.ConfirmServiceInPackageModel)">
+            <summary>
+            API Confirm charge in (belong) package
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ClosePackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Api event action closed patient's package service (Đóng gói dịch vụ)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.CancelledPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Api event action cancelled patient's package service (Hủy gói dịch vụ)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.TerminatedPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Api event action terminated patient's package service (Hủy ngang gói dịch vụ)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.Transferred_CheckExistInvoicedPackageAPI(System.Guid)">
+            <summary>
+            Api Check exist invoiced (Kiểm tra có chỉ định nào được xuất bảng kê chưa?)
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.Transferred_ViewPaymentInPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageTransferredModel)">
+            <summary>
+            API check valid data and get data payment information pre transferrence package  (Kiểm tra dữ liệu có hợp lệ để nâng cấp gói hay ko? lấy dữ liệu để show màn hình thông tin thanh toán khi nâng cấp gói)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.Transferred_SyncInPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageTransferredModel)">
+            <summary>
+            API Post to sync data from OH
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.TransferredPackageAPI(PMS.Contract.Models.AdminModels.PatientInPackageTransferredModel)">
+            <summary>
+            API function to transferred patient in package (Nâng cấp gói)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetStatisticChargeViaVisitAPI(System.String,System.String)">
+            <summary>
+            API get statitic charge via visit (Bảng thống kê chỉ định theo lượt khám)
+            </summary>
+            <param name="pid"></param>
+            <param name="visitcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.ExportStatisticChargeViaVisitAPI(System.String,System.String)">
+            <summary>
+            API Export file for statistic via visit
+            </summary>
+            <param name="pid"></param>
+            <param name="visitcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetStatisticChargeWhenCancelledInPackageAPI(System.Guid)">
+            <summary>
+            API Stat charge in package when cancelled/
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.GetChildrenInPacakgeAPI(System.Guid)">
+            <summary>
+            API get children inside Package
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.CreateOrUpDateChildrenInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New Or Update Service In Package.
+            Support to insert/update multi Service
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.DeleteChildrenInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Delete children in PatientInPackage.
+            Can be support multi delection
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PrintStatisticViaVisitAPI(System.Guid)">
+            <summary>
+            API Print form statistic via visit FN
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PrintPackagRegistrationFormAPI(System.Guid)">
+            <summary>
+            API Print form registration package
+            </summary>
+            <param name="patientinpackageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPatientInPackageController.PatientInPackageServiceUsing_ExportExcel(System.Data.DataTable,DataAccess.Models.PatientInPackage,System.String)">
+            <summary>
+            Function export stat using package
+            </summary>
+            <param name="dt"></param>
+            <param name="model"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminPackageController">
+            <summary>
+            Module Package Management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetListPackageAPI(PMS.Contract.Models.PackageParameterModel)">
+            <summary>
+            API Get List Package
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CreatePackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New Package
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.UpdatePackageAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Update Package
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetPackageDetailAPI(System.Guid)">
+            <summary>
+            API get detail Package
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.DeletePackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Delete Package.
+            Can be support multi delection
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetListServiceInPackageAPI(PMS.Contract.Models.ServiceInPackageParameterModel)">
+            <summary>
+            API Get List service in Package
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CheckValidInputUpdateServiceInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API valid setup service in package
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CreateOrUpDateServiceInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New Or Update Service In Package.
+            Support to insert/update multi Service
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.DeleteServiceInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Delete Service In Package.
+            Can be support multi delection
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetChargeTypeByHospital(System.String)">
+            <summary>
+            API get list ChargeType base from His (OH Core)
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetServicePrice(System.String,System.String)">
+            <summary>
+            API get list Service Price from His (OH Core)
+            </summary>
+            <param name="chargetype"></param>
+            <param name="servicecode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetListPricePolicyCodeAPI(System.Guid)">
+            <summary>
+            API get list policy price code (Danh sách Mã chính sách giá)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.GetListPricePolicySiteAPI(System.Guid)">
+            <summary>
+            API get list policy price site (Danh sách Mã các site đã được áp dụng)
+            </summary>
+            <param name="packageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CreateOrUpdatePricePolicyAPI(PMS.Contract.Models.AdminModels.PackagePricePolicyModel)">
+            <summary>
+            API Create or Update Policy Price (Thiết lập chính sách giá)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.PricePolicyDetailAPI(System.Guid,System.String)">
+            <summary>
+            API get detail Package Price Policy
+            </summary>
+            <param name="packageid"></param>
+            <param name="policycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.PricePolicyAvailableAPI(System.Guid,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Get List Price Policy available
+            </summary>
+            <param name="packageid"></param>
+            <param name="sitecode"></param>
+            <param name="personaltype"></param>
+            <param name="applydate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.UpdatePackagePriceDetailAPI(System.String,System.String,PMS.Contract.Models.AdminModels.PackagePriceDetailModel)">
+            <summary>
+            API Update PackagePriceDetail (Cập nhật Chi tiết thiết lập giá/dịch vụ)
+            </summary>
+            <param name="packageid"></param>
+            <param name="code"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CalculatePriceAPI(PMS.Contract.Models.AdminModels.PackagePricePolicyModel)">
+            <summary>
+            API calculate Service Price (Tính giá). (Dùng trong TH sửa lại giá.)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CalculatePriceDetailAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API calculate Service Price from CORE (OH)(Tính giá)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.CheckExistPatientReg(System.Guid)">
+            <summary>
+            API check have patient was reg this package ?
+            </summary>
+            <param name="packageid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.UpdateServiceReplace">
+            <summary>
+            Cập nhật các dịch vụ thay thế trong gói/Upgrate service replacing
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageController.UpdateExpirationDate">
+            <summary>
+            Cập nhật ngày hết hiệu lực gói (import) (Inactive gói hàng loạt)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminPackageGroupController">
+            <summary>
+            Module Package Group Management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageGroupController.GetListPackageGroupAPI(PMS.Contract.Models.PackageGroupParameterModel)">
+            <summary>
+            API Get List PackageGroup
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageGroupController.CreatePackageGroupAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New PackageGroup
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageGroupController.UpdatePackageGroupAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Update PackageGroup
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageGroupController.GetPackageGroupDetailAPI(System.Guid)">
+            <summary>
+            API get detail PackageGroup
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminPackageGroupController.DeletePackageGroupAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Delete PackageGroup.
+            Can be support multi delection
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminRoleController">
+            <summary>
+            Amin role management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminRoleController.GetListRoleAPI(PMS.Contract.Models.UserListParameterModel)">
+            <summary>
+            API Get list Role
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminRoleController.CreateRoleAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create role
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminRoleController.GetDetailRoleAPI(System.Guid)">
+            <summary>
+            API view role detail
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminRoleController.UpdateRoleAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Update role
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminServiceController">
+            <summary>
+            Module Service
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.GetServiceAPI(PMS.Contract.Models.AdminModels.ServiceParameterModel)">
+            <summary>
+            Get List Service API
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.GetServiceGroupAPI(System.String)">
+            <summary>
+            Get List Service Group API
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.GetServiceCategoryAPI(System.String)">
+            <summary>
+            Get List Service Category API
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.GetListServiceFreeInPackageAPI(PMS.Contract.Models.AdminModels.ServiceFreeInPackageParameterModel)">
+            <summary>
+            API Get List ServiceFreeInPackage
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.GetServiceFreeInPackageDetailAPI(System.Guid)">
+            <summary>
+            API get detail Package
+            </summary>
+            <param name="serviceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.CreateServiceFreeInPackageAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Create New ServiceFreeInPackage
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminServiceController.UpdateServiceFreeInPackageAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API Update ServiceFreeInPackage
+            </summary>
+            <param name="serviceId"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminSiteController">
+            <summary>
+            Site management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminSiteController.GetSiteApi">
+            <summary>
+            API get list site
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminSiteController.GetSiteInfoApi(System.String)">
+            <summary>
+            API Get Site info by site code
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.AdminControllers.AdminUserController">
+            <summary>
+            User Module Management
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.GetADAPI(System.String)">
+            <summary>
+            Get User by AD Information
+            </summary>
+            <param name="ad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.GetADInfoAPI(System.String)">
+            <summary>
+            Get AD Information
+            </summary>
+            <param name="ad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.GetListUserAPI(PMS.Contract.Models.UserListParameterModel)">
+            <summary>
+            Get List User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.CreateUserDetailAPI(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Create User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.GetUserDetailAPI(System.Guid)">
+            <summary>
+            Get User detail information
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.UpdateUserAPI(System.Guid,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Update User information
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.GetNotifyAPI">
+            <summary>
+            API get Notify
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.AdminControllers.AdminUserController.UpdateReadNofifyAPI(System.Guid)">
+            <summary>
+            API set is read notify
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.BaseControllers.BaseApiController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PMS.Controllers.BaseControllers.BaseApiController.CurrentUserName">
+            <summary>
+            Get current user name
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.BaseControllers.BaseApiController.GetTopRole(DataAccess.Models.User)">
+            <summary>
+            Lấy ra role cao nhất
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.GeneralControllers.StatusEnum">
+            <summary>
+            Login/Logout module
+            </summary>
+            
+        </member>
+        <member name="M:PMS.Controllers.GeneralControllers.AccountController.ShowCaptcha">
+            <summary>
+            API Show captcha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.GeneralControllers.AccountController.LoginAPI(PMS.Contract.Models.LoginParameterModel)">
+            <summary>
+            API Login
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.GeneralControllers.AccountController.GetLogout">
+            <summary>
+            API Logout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.GeneralControllers.UserController">
+            <summary>
+            User Genera Module
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.GeneralControllers.UserController.GetUserAPI">
+            <summary>
+            API Get List User FN
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.Controllers.GeneralControllers.UserController.GetUserInfoAPI(System.String,System.String)">
+            <summary>
+            API get user info
+            </summary>
+            <param name="username"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.Controllers.HomeController">
+            <summary>
+            HomeController
+            </summary>
+        </member>
+        <member name="M:PMS.Controllers.HomeController.Index">
+            <summary>   
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.WebApiApplication">
+            <summary>
+            WebApiApplication
+            </summary>
+        </member>
+        <member name="M:PMS.WebApiApplication.Application_Start">
+            <summary>
+            Application_Start
+            </summary>
+        </member>
+        <member name="M:PMS.WebApiApplication.Application_PreSendRequestHeaders(System.Object,System.EventArgs)">
+            <summary>
+            Application_PreSendRequestHeaders
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

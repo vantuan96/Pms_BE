@@ -1,0 +1,21 @@
+﻿@{
+    var token = (string)ViewBag.token;
+
+    Layout = null;
+}
+<script src="~/Content/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        localStorage.setItem('Token', '@token');
+        var AzureRedirect = '@(System.Configuration.ConfigurationManager.AppSettings["AzureRedirect"].ToString())'
+      /*  localStorage.setItem('logined', '1');*/
+     /*   window.location.href = AzureRedirect + "Home/RedircePage";*/
+        setTimeout(function () {
+            var token = localStorage.getItem('Token');
+            if (token != null) {
+                window.location.href = AzureRedirect + "#";
+            }
+        }, 100)
+    });
+</script>
+
